@@ -27,12 +27,19 @@
 7.前端layui开发文档：https://www.layui.com/doc/ （参考demo,需要什么就去网站上复制什么就好了，基本没难度） 
 
 8.超级管理员(服务端)登录页面：
+
   ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic4.jpg?raw=true)
+  
   用户管理界面效果图：
+  
   ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic5.jpg?raw=true)
+  
   普通用户(客户端)登录页面：
+  
   ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic6.jpg?raw=true)
+  
   客户端主页界面效果图：
+  
   ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic7.jpg?raw=true)
 
 上面操作的图片加载有一丢丢大，有意向的朋友耐心等待30s左右
