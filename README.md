@@ -9,10 +9,12 @@
 1.首先将项目导入到IDEA中，在File>>setting中配置好maven
   
 2.在File>>Project Structure>>Project中设置如下图：
-pic2
+
+![Project](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic2.jpg?raw=true)
 
 3.在File>>Modules>>"+">>Import Modules>>选中任意一个子项目如"app-web">>Appley 设置完成后如下图：
-pic3
+
+![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic3.jpg?raw=true)
 
 4.在mysql中创建一个名为demo的数据库，本项目共有三张表，启动项目后均会自动创建，不需要手动创建
 
@@ -24,18 +26,14 @@ pic3
   
 7.前端layui开发文档：https://www.layui.com/doc/ （参考demo,需要什么就去网站上复制什么就好了，基本没难度） 
 
-8.
-超级管理员(服务端)登录页面：
-pic4
-
-用户管理界面效果图：
-pic5
-
-普通用户(客户端)登录页面：
-pic6
-
-客户端主页界面效果图：
-pic7
+8.超级管理员(服务端)登录页面：
+  ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic4.jpg?raw=true)
+  用户管理界面效果图：
+  ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic5.jpg?raw=true)
+  普通用户(客户端)登录页面：
+  ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic6.jpg?raw=true)
+  客户端主页界面效果图：
+  ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic7.jpg?raw=true)
 
 上面操作的图片加载有一丢丢大，有意向的朋友耐心等待30s左右
 
