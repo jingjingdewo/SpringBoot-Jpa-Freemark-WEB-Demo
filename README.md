@@ -10,11 +10,11 @@
   
 2.在File>>Project Structure>>Project中设置如下图：
 
-![Project](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic2.jpg?raw=true)
+![pic2](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic2.jpg?raw=true)
 
 3.在File>>Modules>>"+">>Import Modules>>选中任意一个子项目如"app-web">>Appley 设置完成后如下图：
 
-![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic3.jpg?raw=true)
+![pic3](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic3.jpg?raw=true)
 
 4.在mysql中创建一个名为demo的数据库，本项目共有三张表，启动项目后均会自动创建，不需要手动创建
 
@@ -28,19 +28,19 @@
 
 8.超级管理员(服务端)登录页面：
 
-  ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic4.jpg?raw=true)
+  ![pic4](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic4.jpg?raw=true)
   
   用户管理界面效果图：
   
-  ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic5.jpg?raw=true)
+  ![pic5](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic5.jpg?raw=true)
   
   普通用户(客户端)登录页面：
   
-  ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic6.jpg?raw=true)
+  ![pic6](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic6.jpg?raw=true)
   
   客户端主页界面效果图：
   
-  ![Modules](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic7.jpg?raw=true)
+  ![pic7](https://github.com/jingjingdewo/SpringBoot-Jpa-Freemark-WEB-Demo/blob/master/pic7.jpg?raw=true)
 
 上面操作的图片加载有一丢丢大，有意向的朋友耐心等待30s左右
 
