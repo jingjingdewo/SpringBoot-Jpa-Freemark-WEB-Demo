@@ -12,7 +12,7 @@
     <artifactId>demo-manage</artifactId>
     <packaging>jar</packaging>
     <name>demo-manage</name>
-    <description>Demo客户端模块</description>
+    <description>Demo管理端模块</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
