@@ -194,28 +194,32 @@ public class AppPersonController extends SysBaseController{
     @ResponseBody
     public Object jsonEdit(Person model) {
         Message msg = new Message();
-        try {
-            User curUser = getCurAdmin();
-            msg.setSucceedMsg("验证通过");
-            if (StringUtils.isBlank(model.getName())) {
-                msg.setFailMsg("请填写姓名");
-            } else if (StringUtils.isBlank(model.getIdNum())) {
-                msg.setFailMsg("请填写证件号码");
+        Person old = appPersonService.get(model.getId());
+        if (old == null || old.getDeleted()) {
+            msg.setMessage(getMessage("data.deleted"));
+        }else {
+            try {
+                User curUser = getCurAdmin();
+                if (StringUtils.isBlank(model.getName())) {
+                    msg.setFailMsg("请填写姓名");
+                } else if (StringUtils.isBlank(model.getIdNum())) {
+                    msg.setFailMsg("请填写证件号码");
+                }
+                if(!old.getLoginId().equals(model.getLoginId()) && checkLoginId(model.getLoginId()) == "0"){
+                    msg.setFailMsg("用户名已经被注册");
+                }else if (!old.getIdNum().equals(model.getIdNum()) && checkIdNum(model.getIdNum()) == "0") {
+                    msg.setFailMsg("证件号码已经被注册");
+                } else {
+                    model.setAlive(true);
+                    model.setMenderId(curUser.getId());
+                    model.setMenderName(curUser.getName());
+                    appPersonService.saveOrUpdate(model);
+                    msg.setSucceedMsg("保存成功");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                msg.setFailMsg("保存失败");
             }
-            if(checkLoginId(model.getLoginId()) == "0"){
-                msg.setFailMsg("用户名已经被注册");
-            }else if (checkIdNum(model.getIdNum()) == "0") {
-                msg.setFailMsg("证件号码已经被注册");
-            }else {
-                model.setAlive(true);
-                model.setMenderId(curUser.getId());
-                model.setMenderName(curUser.getName());
-                appPersonService.saveOrUpdate(model);
-                msg.setSucceedMsg("保存成功");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            msg.setFailMsg("保存失败");
         }
         return msg;
     }
@@ -227,6 +231,7 @@ public class AppPersonController extends SysBaseController{
      * @param search
      */
     @RequestMapping("json/Delete")
+    @ResponseBody
     public Object jsonDelete(Search search) {
         Message msg = new Message();
         User curUser = getCurAdmin();

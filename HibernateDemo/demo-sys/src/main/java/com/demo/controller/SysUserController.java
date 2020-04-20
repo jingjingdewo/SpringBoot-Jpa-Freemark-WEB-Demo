@@ -157,7 +157,8 @@ public class SysUserController extends SysBaseController{
      * @param idNum
      */
     @RequestMapping(value = "/checkIdNum", method = RequestMethod.GET)
-    public @ResponseBody String checkIdNum(String idNum) {
+    @ResponseBody
+    public String checkIdNum(String idNum) {
         User user = sysUserService.getByIdNum(idNum);
         if (user == null) {
             return "1";
@@ -173,7 +174,8 @@ public class SysUserController extends SysBaseController{
      * @param loginId
      */
     @RequestMapping(value = "/checkLoginId", method = RequestMethod.GET)
-    public @ResponseBody String checkLoginId(String loginId) {
+    @ResponseBody
+    public String checkLoginId(String loginId) {
         User user = sysUserService.getByLoginId(loginId);
         if (user == null) {
             return "1";
@@ -229,6 +231,7 @@ public class SysUserController extends SysBaseController{
      * @param search
      */
     @RequestMapping("json/Delete")
+    @ResponseBody
     public Object jsonDelete(Search search) {
         Message msg = new Message();
         User curUser = getCurAdmin();

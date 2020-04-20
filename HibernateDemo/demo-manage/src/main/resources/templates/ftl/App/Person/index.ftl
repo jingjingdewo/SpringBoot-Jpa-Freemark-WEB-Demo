@@ -117,14 +117,16 @@
                                         async: false,
                                         traditional: true,
                                         data: {
-                                            ids: ids
+                                            delIds: ids
                                         },
                                         success: function (data) {
                                             if(data.statusCode == 1){
-                                                table.reload('table', {page: {page: 1}});
-                                                layer.close(index);
+                                                layer.msg(data.message, {time:2000, icon: 1}, function () {
+                                                    tableModule.reload({page: {page: 1}});
+                                                    layer.close(index);
+                                                });
                                             } else {
-                                                layer.msg("删除失败", {icon: 5})
+                                                layer.msg("删除失败", {time:2000, icon: 5})
                                             }
                                         }
                                     });
@@ -144,12 +146,14 @@
                                 type: "post",
                                 async: false,
                                 data: {
-                                    id: data.id
+                                    delIds: data.id
                                 },
                                 success: function (data) {
                                     if(data.statusCode == 1){
-                                        layer.close(index);
-                                        tableModule.reload({page: {page: 1}});
+                                        layer.msg(data.message, {time:2000, icon: 1}, function () {
+                                            tableModule.reload({page: {page: 1}});
+                                            layer.close(index);
+                                        })
                                     } else {
                                         layer.msg("删除失败", {icon: 5})
                                     }
